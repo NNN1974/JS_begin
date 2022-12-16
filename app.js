@@ -1,220 +1,69 @@
-    //  1 Переменные
+    // const name = "Николай"
+    // const age = 65
+// console.log(typeof name)
 
-// - Комментарий
-// Variable - переменная
-// var name = 'Nikolay' - желательно не испoльзовать
+// const output = "Привет, меня зовут " + name + " мой возраст " + age + " лет."
 
-// camelCase - желательное написание имени элемента в javaScript
+    // function getAge() {
+    //    return age 
+    // }
 
-// const firstName = "Nikolay"
-// const firstName = "Nikola"
-// const lastName = "Shabalin" // string 
+// const output = `Привет, меня зовут ${name} и мой возраст ${age} лет.` // или заменим переменную age на функцию
+// const output = `Привет, меня зовут ${name} и мой возраст ${getAge()} лет.`
 
-// let age = 65   // number
+// const output = `Привет, меня зовут ${name} и мой возраст ${age < 20 ? "A" : "B"} лет.` // Использовано тернарное выражение
+// const output = `Привет, меня зовут ${name} и мой возраст ${age > 20 ? age : "B"} лет.` 
 
-// const isProgrammer = true   // boolean
+// Обратные кавычки позволяют создавать многострочный код 
+    // const output = `
+    // <div>This is div</div>
+    // <p>this is o</p> 
+    // `
+    // console.log(output)
 
-// const _private = "private" // Допустимо просто: _
-// const $ = "some value"
-// В названии переменной не должны быть зарезервированные слова: if и др.
+// Встроенные методы - 2:28:40
 
-// const withNum5 = "5" // название переменной не должно начинаться с цифры
-// console.log(_private) - valid
-// console.log(isProgrammer) - valid
+// const name = "Николай"
+// console.log(name.length)
+// console.log(name.toUpperCase())
+// console.log(name.toLowerCase())
+// console.log(name.charAt(4)) // л - на позиции с индексом 4
+// console.log(name.indexOf("кол")) // 2 - начиная с позиции с индексом 2
+// console.log(name.startsWith("Никол"))
+// console.log(name.endsWith("лай"))
+// console.log(name.repeat(3))
 
-    // 2 Мутирование (работа с разными типами данных)
-
-// Возраст в программе не будем менять, поэтому строку 13 закомментируем и сделаем:
-
-// const age = 65
-
-// Конкатенация (сцепление) строк: "Имя человека: " (тип - string) + firstName (тип - string)
-// age - number, но учитывая, что предыдущие элементы - string, то JS приводит age к строке:
-
-// console.log("Имя человека: " + firstName + ", а возраст человека: " + age) // все переменные - string
-
-// console.log(age) // age по-прежнему - number
-// console.log(age.toString()) // age здесь - string
-
-// alert  - эта функция не присутствует в JS, а присутствует в браузере, например, в Chrome.
-// На мобильном устройстве или на сервере ее не будет 
-
-// alert("Имя человека: " + firstName + ", а возраст человека: " + age) // Выводится на табличку, а не на вкладку JS
-
-// const lastName = prompt( "Введите фамилию:")
-// alert(firstName + " " + lastName)
-
-    // 3 Операторы
-
-// const currentYear = 2022
-// const birthYear = 1957
-
-// const age = currentYear - birthYear
-// console.log(age)
-// const a = 10
-// const b = 5
-
-// console.log(a + b)
-// console.log(a - b)
-// console.log(a * b)
-// console.log(a / b)
-
-// let currentYear = 2022
-// console.log(currentYear++) // выведется вначале 2022, потом прибавится 1 и получится 2023 (остается в памяти)
-// console.log(currentYear) // выведется на консоль уже 2023
-// console.log(++currentYear) // увеличивается на 1 и выводится
-// аналогично с минусом
-// console.log(--currentYear) // уменьшается на 1 и выводится
-
-// let c = 32
-// c = c + a // идентично:
-// c += a  
-
-// // аналогично:
-// c -= a
-// c *= a
-// c /= a
-
-    // 4 Типы данных
-
-    // 5 примитивов:
-// const isProgrammer = true  
-// const firstName = "Nikolay"
-// const age = 65
-// let x
-
-// console.log(typeof isProgrammer)
-// console.log(typeof firstName)
-// console.log(typeof age)
-// console.log(typeof x)
-// console.log(typeof null) // баг - внутренняя ошибка JS, выводит object. Нужно:
-// console.log(null)
-
-// 5 Приоритет операторов
-
-// const fullAge = 65
-// const birthYear = 1957
-// const currentYear = 2022
-
-// const isFullAge = currentYear - birthYear >= fullAge
-// Операторы сравнения: > < >= <=
-// Приоритет у вычитания, получится: 65 >= 65
-// console.log(isFullAge)
-
-// 6 Условные операторы
-
-// const courseStatus = "fail" // Возможный статус: ready, pending, fail
-
-// if (courseStatus === "ready") {
-//     console.log("Курс готов и его можно проходить")
-// } else if (courseStatus === "pending") {
-//     console.log("Курс пока находится в процессе разработки")
-// } else (
-//     console.log("Курс отменен")
-// )
-// Недостаток: 2-е условие выполняется в любом случае, даже в случае выполнения 1-го условия
-// Поэтому перед if ставится else и в случае pending выполняется 2-е условие
-
-// const isReady = true // или false
-// if (isReady) {
-//     console.log("Все готово!")
-// } else {
-//     console.log("Все не готово...")
-// }
-//  if (isReady === true) { можно заменить на: if (isReady) {
-
-// Строки 119-123 можно заменить на Тернарное выражение:
-// isReady ? console.log("Все готово!") : console.log("Все не готово...")
-
-    // 7 Булевая логика
-// https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Expressions_and_Operators#%D0%BB%D0%BE%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5_%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D1%8B
-
-    // 8 функции
-
-// function calculateAge(year) {
-//     return 2022 - year
-// }
-
-                // const myAge = calculateAge(1957)
-                // console.log(myAge)
-                // или:
-
-                // console.log(calculateAge(1957))
-                // console.log(calculateAge(1987))
-                // console.log(calculateAge(2013))
-
-                // const firstName = "Nikolay"
-                // const year = 1957
-
-// function logInfoAbout(firstName, year) {
-//     const age = calculateAge(year)   
-
-//     if (age > 0) {
-//         console.log("Человек по имени " + firstName + " сейчас имеет возраст " + age)
-//     } else {
-//         console.log("Вообще-то это уже будущее!  ")
-//     }
-// }
-
-//     logInfoAbout("Nikolay", 1957)
-//     logInfoAbout("Татьяна", 1962)
-//     logInfoAbout("Еще внук/внучка", 2023)
+// const string = "   password    "
+// console.log(string)
+// console.log(string.trim())
+// console.log(string.trimLeft()) // устар.?
+// console.log(string.trimRight()) // устар.?
 
 
-        // 9 Массивы
-                
-        // const cars = new Array("Мазда", "Мерседес", "Форд")  // Правильнее создавать массив через квадратные скобки:
-// const cars = ["Мазда", "Мерседес", "Форд"]
+// 2:35:00 - Новый синтаксис с использованием обратных кавычек (альтернативный)
 
-// console.log(cars[2]) // Выводится элемент массива с индексом 2 // 1-й элемент массива имеет индкс 0
-
-
-// cars[0] = "Porshe" // Заменяем элемент массива с индексом 0 (Мазда) на другой (Porshe)
-
-                     // cars[3] = "Ауди" // Добавляется новый элемент массива (Ауди) или по-другому:
-// cars[cars.length] = "Мазда" // Добавляется новый элемент массива
-
-// console.log(cars.length) // Выводится длина массива
-
-// console.log(cars)
-
-        // 10 Циклы
-
-// const cars = ["Мазда", "Мерседес", "Форд", "Porshe"]
-
-            // for (let i = 0; i < cars.length; i++) {
-            // const car = cars[i]
-            //     console.log(car)
-            // }  Сейчас появился более удобный способ для итерации массива:
-
-// for (let car of cars) {
-//     console.log(car)
-// }
-
-//  11 Объекты
-
-const person = {
-    firstName: "Nikolay",
-    lastName: "Shabalin",
-    year: 1957,
-    languages: ["Ru", "En", "De", "Po"],
-    hasWife: true,
-    greet: function() {   // Здесь function является методом, а не функцией, т.к. определена в контексте объекта
-        console.log("greet from person")
+function logPerson(s, name, age) {
+    // console.log(s, name, age)
+    if (age < 0) {
+        age = "Еще не родился"
     }
+    // return "Info about person"
+    // return `${s[0]}` // Имя:
+    // return `${s[]}` // Выводится весь массив s
+    return `${s[0]}${name}${s[1]}${age}${s[2]}`
 }
+// const personName = "Николай"
+const personName2 = "Максим"
+
+// const personAge = 65
+const personAge2 = -1
+
+// const output = logPerson`Имя: ${personName}, Возраст: ${personAge}!`
+const output2 = logPerson`Имя: ${personName2}, Возраст: ${personAge2}!`
+
+// console.log(output)
+console.log(output2)
 
 
-console.log(person.firstName) // Выводится один элемент объекта
-console.log(person["lastName"]) // Выводится один элемент объекта другим способом
-const key = "year" // или можно:
-// const key = "languages"
-console.log(person[key])
 
-                    person.hasWife = false // Изменение ключей объекта
-person.isProgrammer = true // Добавление ключей объекта 
-// console тоже является объектом, а log - это функция
-// Поэтому мы можем вызвать метод greet:
-person.greet() // Выводится приветсвие: greet from person
 
-console.log(person) // Выводится вся информация 

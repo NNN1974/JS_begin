@@ -1,1 +1,1 @@
-# JS_begin
+# JS_begin - Изучение JavaScript
